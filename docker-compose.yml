@@ -1,14 +1,5 @@
 version: '3'
 services:
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    hostname: node1
-    ports:
-      - 5672:5672
-      - 15672:15672
-    volumes:
-      - rabbitmq:/var/lib/rabbitmq
   filebeat:
     image: docker.elastic.co/beats/filebeat-oss:7.8.0
     container_name: filebeat
